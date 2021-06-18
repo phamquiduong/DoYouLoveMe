@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        html{
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        }
+        #main{
+            background-color: rgb(41, 41, 41);
+            /* background-color: rgb(231, 231, 231); */
+            border: rgb(109, 109, 109) solid 1px;
+            border-radius: 5px;
+            height: 180px;
+            width: 500px;
+            text-align: center;
+            padding: 18px;
+            margin: 50vh auto 0px;
+            transform: translateY(-50%);
+        }
+        button{
+            margin: 50px;
+            background-color: rgb(66, 66, 66);
+            /* background-color: whitesmoke; */
+            border: 1px black solid;
+            width: 75px;
+            height: 30px;
+            color: white;
+            transition: 0.2s;
+            border-color: rgb(116, 116, 116);
+        }
+        a{
+            display: block;
+            color: rgb(167, 167, 255);
+            margin-top: 100px;
+        }
+    </style>
+    <script>
+        t = 1;
+        count = 0;
+
+        function yes(){
+            document.getElementById("main").innerHTML = "<p>Vậy là đồng ý yêu anh rồi nhé 😍🙆‍♂️</p>";
+        }
+        function noclick(){
+            document.getElementById("main").innerHTML = "<p>Không thì thôi vậy 😭 </p><a href=\"javascript:window.location.href=window.location.href\"> Suy nghĩ lại 🤗</a>";
+        }
+        function no(){
+            if (t==0){
+                document.getElementById("ButtonNo").style.transform="translate(-30px, 60px)";
+            }
+            if (t==1){
+                document.getElementById("ButtonNo").style.transform="translate(-100px, -60px)";
+            }
+            if (t==2){
+                document.getElementById("ButtonNo").style.transform="translate(90px, -90px)";
+            }
+            if (t==3){
+                document.getElementById("ButtonNo").style.transform="translate(100px, 50px)";
+            }
+            
+            t = (t + Math.floor(Math.random() * 3) + 1) % 4;
+
+            count++;
+            if (count == 5) document.getElementById("text").innerHTML = "Yêu đi.. Nhấn không hơi nhiều rồi 😭"
+            if (count == 10) document.getElementById("text").innerHTML = "Thôi tắt mọe trang web đi.. Nhấn không gì lắm thế -_-"
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <p id='text'>Em có yêu anh không?</p>
+        <button onclick="yes()"> Có </button>
+        <button onmouseover="no()" onclick="noclick()" id="ButtonNo"> Không </button>      
+    </div> 
+</body>
+</html>
