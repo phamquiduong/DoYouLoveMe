@@ -11,6 +11,13 @@
             background-color: black;
             color: white;
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
         }
         #main{
             background-color: rgb(41, 41, 41);
@@ -46,10 +53,10 @@
         count = 0;
 
         function yes(){
-            document.getElementById("main").innerHTML = "<p>Vậy là đồng ý yêu anh rồi nhé 😍🙆‍♂️</p>";
+            document.getElementById("main").innerHTML = "<p>Yêu thôi ngại gì.. 😍🙆‍♂️</p>";
         }
         function noclick(){
-            document.getElementById("main").innerHTML = "<p>Không thì thôi vậy 😭 </p><a href=\"javascript:window.location.href=window.location.href\"> Suy nghĩ lại 🤗</a>";
+            document.getElementById("main").innerHTML = "<p>Không thì thôi 😭 </p><a href=\"javascript:window.location.href=window.location.href\"> Suy nghĩ lại 🤗</a>";
         }
         function no(){
             if (t==0){
@@ -69,13 +76,13 @@
 
             count++;
             if (count == 5) document.getElementById("text").innerHTML = "Yêu đi.. Nhấn không hơi nhiều rồi 😭"
-            if (count == 10) document.getElementById("text").innerHTML = "Thôi tắt mọe trang web đi.. Nhấn không gì lắm thế -_-"
+            if (count == 10) document.getElementById("text").innerHTML = "Thôi tắt mọe trang web đi.. Nhấn không gì lắm thế 😑"
         }
     </script>
 </head>
 <body>
     <div id="main">
-        <p id='text'>Em có yêu anh không?</p>
+        <p id='text'>Em có yêu anh hông?? 😁</p>
         <button onclick="yes()"> Có </button>
         <button onmouseover="no()" onclick="noclick()" id="ButtonNo"> Không </button>      
     </div> 
